@@ -51,10 +51,10 @@ if prompt := st.chat_input("ここに質問を入力してください"):
     # Generate a response using the OpenAI API.
     stream = client.chat.completions.create(
         model="gpt-3.5-turbo",
-        system_messages=system_messages,
         messages=[
             {"role": m["role"], "content": m["content"]}
-            for m in st.session_state.messages
+            for m in st.session_state.messages,
+            for m in st.session_state.system_messages
         ],
         stream=True,
     )
