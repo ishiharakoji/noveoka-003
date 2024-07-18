@@ -25,7 +25,7 @@ system_prompt = """
 """
 
 if "system_messages" not in st.session_state:
-    st.session_state["system_messages"] = [
+    st.session_state.system_messages = [
         {"role": "system", "content": system_prompt}
         ]
     
