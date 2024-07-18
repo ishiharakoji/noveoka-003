@@ -53,7 +53,7 @@ if prompt := st.chat_input("ここに質問を入力してください"):
         model="gpt-3.5-turbo",
         messages=[
             {"role": m["role"], "content": m["content"]}
-            for m in st.session_state.messages,
+            for m in st.session_state.messages
             for m in st.session_state.system_messages
         ],
         stream=True,
