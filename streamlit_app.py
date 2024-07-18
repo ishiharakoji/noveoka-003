@@ -23,11 +23,6 @@ system_prompt = """
 * 政治
 * 戦争
 """
-
-if "system_messages" not in st.session_state:
-    st.session_state.system_messages = [
-        {"role": "system", "content": system_prompt}
-        ]
     
 # Create a session state variable to store the chat messages. This ensures that the
 # messages persist across reruns.
